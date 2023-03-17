@@ -1,0 +1,7 @@
+{
+  "name": "Sentinel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
