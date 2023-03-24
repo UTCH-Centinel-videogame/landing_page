@@ -1,46 +1,95 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Videojuego</ion-title>
+    <ion-title>Centinel</ion-title>
+    <ion-select interface="popover" slot="end" placeholder="Documentation">
+      <ion-select-option value="option1">Manual</ion-select-option>
+      <ion-select-option value="option2">Documentation</ion-select-option>
+      <ion-select-option value="option3">Idk other thing</ion-select-option>
+    </ion-select>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div style="background-image: url('https://cdn.player.one/sites/player.one/files/2022/02/21/rogue-tower-patch-1.0.12.jpg'); text-align: center; height: 100%">
-    <h1>Bienvenido al Videojuego</h1>
+<ion-content >
+  <div class="center">
+    <h1 class="title" style="font-size: 128px;">Sentinel</h1>
   </div>
-
-  <div style="display: flex; ">
-
-    <ion-card color="primary" style="flex-grow: 1">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Card Content
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card color="secondary" style="flex-grow: 1">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Card Content
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card color="tertiary" style="flex-grow: 1">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Card Content
-      </ion-card-content>
-    </ion-card>
+  <div class="center">
+    <button class="palpitating-button" style="margin-top: 100px;">PLAY NOW!</button>
   </div>
+  <div class="blurred-div">
+      <p>
+        Sentinel is a an tower defense game in a magical world, where you have to collect some resources while you
+        protect your base from the enemies! 
+      </p>
+      <p>
+        Combine different types of mages and create stronger attacks!
+      </p>
+  </div>
+  <div class="gallery">
+    <div class="center">
+      <h1 class="title">Gallery</h1>
+    </div>
+    <div class="gallery-container">
+      <div class="image-container">
+        <div class="center blurred-div"><h4 class="title">Use elemental mages!</h4></div>
+        <div class="center"><img src="../../assets/images/screen-shoot4.png" class="image"/></div>
+      </div>
+      <div class="image-container">
+        <div class="center blurred-div"><h4 class="title">Create destructive convinations!</h4></div>
+        <div class="center"><img src="../../assets/images/screen-shoot5.png" class="image"/></div>
+      </div>
+      <div class="image-container">
+        <div class="center blurred-div"><h4 class="title">Collect resoucres!</h4></div>
+        <div class="center"><img src="../../assets/images/screen-shoot2.png" class="image"/></div>
+      </div>
+      <div class="image-container">
+        <div class="center blurred-div"><h4 class="title">Defend your base!</h4></div>
+        <div class="center"><img src="../../assets/images/screen-shoot6.png" class="image"/></div>
+      </div>
+    </div>
+    <div class="center">
+      <h1 class="title">Credits</h1>
+    </div>
+    <div style="display:flex" class="credits center">
+      <div style="padding:10px;">
+        <div class="blurred-div">
+          <h4>Brayan Prieto Lozoya</h4>
+          <div class="center">
+            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <div class="blurred-div">
+          <h4>Fernando Tarango De La Vega</h4>
+          <div class="center">
+            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <div class="blurred-div">
+          <h4>Paulina Torres Borunda</h4>
+          <div class="center">
+            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Credits</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-button href="https://twitter.com/example"><ion-icon slot="icon-only" name="logo-twitter"></ion-icon></ion-button>
+      <ion-button href="https://www.facebook.com/example"><ion-icon slot="icon-only" name="logo-facebook"></ion-icon></ion-button>
+      <ion-button href="https://www.instagram.com/example"><ion-icon slot="icon-only" name="logo-instagram"></ion-icon></ion-button>
+      <ion-button href="https://www.linkedin.com/company/example"><ion-icon slot="icon-only" name="logo-linkedin"></ion-icon></ion-button>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-text>Copyright &copy; 2023 Example Inc.</ion-text>
+  
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
