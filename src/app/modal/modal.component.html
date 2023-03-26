@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"/>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="surveyForm" (ngSubmit)="submitSurvey()">
+
+    <ion-item>
+      <ion-label>Gameplay:</ion-label>
+      <ion-select formControlName="answer1">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Music:</ion-label>
+      <ion-select formControlName="answer2">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Design:</ion-label>
+      <ion-select formControlName="answer3">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Story:</ion-label>
+      <ion-select formControlName="answer3">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Difficulty:</ion-label>
+      <ion-select formControlName="answer3">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Commentary:</ion-label>
+      <ion-select formControlName="answer3">
+        <ion-select-option value="option1">0</ion-select-option>
+        <ion-select-option value="option2">50</ion-select-option>
+        <ion-select-option value="option3">100</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" [disabled]="!surveyForm.valid">Submit</ion-button>
+
+  </form>
+</ion-content>

@@ -1,91 +1,121 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Centinel</ion-title>
-    <ion-select interface="popover" slot="end" placeholder="Documentation">
-      <ion-select-option value="option1">Manual</ion-select-option>
-      <ion-select-option value="option2">Documentation</ion-select-option>
-      <ion-select-option value="option3">Idk other thing</ion-select-option>
-    </ion-select>
+  <ion-toolbar class="new-background-color">
+    <ion-title style="font-family:SentinelFont;"><img src="../../assets/images/Wizard_water.png" style="width: 24px;"/> Sentinel</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToPdf('manual')">
+        <ion-icon name="book"></ion-icon>
+      </ion-button>
+      <ion-button (click)="goToPdf('documentation')">
+        <ion-icon name="document"></ion-icon>
+      </ion-button>
+      <ion-button (click)="goToPdf('other-thing')">
+        <ion-icon name="folder"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content >
-  <div class="center">
-    <h1 class="title" style="font-size: 128px;">Sentinel</h1>
-  </div>
-  <div class="center">
-    <button class="palpitating-button" style="margin-top: 100px;">PLAY NOW!</button>
-  </div>
-  <div class="blurred-div">
-      <p>
-        Sentinel is a an tower defense game in a magical world, where you have to collect some resources while you
-        protect your base from the enemies! 
-      </p>
-      <p>
-        Combine different types of mages and create stronger attacks!
-      </p>
+  <div class="bg-img">
+    
+    <div class="center">
+      <h1 class="title" style="font-size: 15vw;">Sentinel</h1>
+    </div>
+    <div class="center">
+      <button class="palpitating-button">PLAY NOW!</button>
+      <button (click)="openModal()">ANSWER SURVEY</button>
+      <button>Credits</button>
+    </div>
+    <div class="blurred-div">
+        <p>
+          Sentinel is a an tower defense game in a magical world, where you have to collect some resources while you
+          protect your base from the enemies! 
+        </p>
+        <p>
+          Combine different types of mages and create stronger attacks!
+        </p>
+    </div>
   </div>
   <div class="gallery">
     <div class="center">
       <h1 class="title">Gallery</h1>
     </div>
-    <div class="gallery-container">
-      <div class="image-container">
-        <div class="center blurred-div"><h4 class="title">Use elemental mages!</h4></div>
-        <div class="center"><img src="../../assets/images/screen-shoot4.png" class="image"/></div>
-      </div>
-      <div class="image-container">
-        <div class="center blurred-div"><h4 class="title">Create destructive convinations!</h4></div>
-        <div class="center"><img src="../../assets/images/screen-shoot5.png" class="image"/></div>
-      </div>
-      <div class="image-container">
-        <div class="center blurred-div"><h4 class="title">Collect resoucres!</h4></div>
-        <div class="center"><img src="../../assets/images/screen-shoot2.png" class="image"/></div>
-      </div>
-      <div class="image-container">
-        <div class="center blurred-div"><h4 class="title">Defend your base!</h4></div>
-        <div class="center"><img src="../../assets/images/screen-shoot6.png" class="image"/></div>
-      </div>
-    </div>
+    <ion-grid >
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <div class="credits-card">
+            <div class="center"><h4 class="title">Create destructive convinations!</h4></div>
+            <div class="center"><img src="../../assets/images/screen-shoot5.png" class="image"/></div>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <div class="credits-card">
+            <div class="center"><h4 class="title">Collect resoucres!</h4></div>
+            <div class="center"><img src="../../assets/images/screen-shoot2.png" class="image"/></div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <div class="credits-card ">
+            <div class="center"><h4 class="title">Elemental Mages at your command!</h4></div>
+            <div class="center"><img src="../../assets/images/screen-shoot1.png" class="image"/></div>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <div class="credits-card">
+            <div class="center"><h4 class="title">Conquer your enemies!</h4></div>
+            <div class="center"><img src="../../assets/images/screen-shoot3.png" class="image"/></div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     <div class="center">
       <h1 class="title">Credits</h1>
     </div>
-    <div style="display:flex" class="credits center">
-      <div style="padding:10px;">
-        <div class="blurred-div">
-          <h4>Brayan Prieto Lozoya</h4>
-          <div class="center">
-            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+    <ion-grid class="credits center">
+      <ion-row>
+        <ion-col size="12" size-md="4" style="padding:10px;">
+          <div class="credits-card">
+            <div class="credits-card-header">
+              <h4>Brayan Prieto Lozoya</h4>
+            </div>
+            <div class="center">
+              <img class="image-square" src="../../assets/images/brayan.jpg" alt="">
+            </div>
           </div>
-        </div>
-      </div>
-      <div style="padding:10px;">
-        <div class="blurred-div">
-          <h4>Fernando Tarango De La Vega</h4>
-          <div class="center">
-            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+        </ion-col>
+        <ion-col size="12" size-md="4" style="padding:10px;">
+          <div class="credits-card">
+            <div class="credits-card-header">
+              <h4>Fernando Tarango De La Vega</h4>
+            </div>
+            <div class="center">
+              <img class="image-square" src="../../assets/images/fer.jpg" alt="">
+            </div>
           </div>
-        </div>
-      </div>
-      <div style="padding:10px;">
-        <div class="blurred-div">
-          <h4>Paulina Torres Borunda</h4>
-          <div class="center">
-            <img class="image-rounded" src="https://outworldgamers.com/wp-content/uploads/2019/04/Persona-5.jpg" alt="">
+        </ion-col>
+        <ion-col size="12" size-md="4" style="padding:10px;">
+          <div class="credits-card">
+            <div class="credits-card-header">
+              <h4>Ilse Paulina Torres Borunda</h4>
+            </div>
+            <div class="center">
+              <img class="image-square" src="../../assets/images/pau.jpg" alt="">
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
+  
   <ion-footer>
     <ion-toolbar>
       <ion-title>Credits</ion-title>
     </ion-toolbar>
     <ion-toolbar>
-      <ion-button href="https://twitter.com/example"><ion-icon slot="icon-only" name="logo-twitter"></ion-icon></ion-button>
       <ion-button href="https://www.facebook.com/example"><ion-icon slot="icon-only" name="logo-facebook"></ion-icon></ion-button>
       <ion-button href="https://www.instagram.com/example"><ion-icon slot="icon-only" name="logo-instagram"></ion-icon></ion-button>
-      <ion-button href="https://www.linkedin.com/company/example"><ion-icon slot="icon-only" name="logo-linkedin"></ion-icon></ion-button>
     </ion-toolbar>
     <ion-toolbar>
       <ion-text>Copyright &copy; 2023 Example Inc.</ion-text>

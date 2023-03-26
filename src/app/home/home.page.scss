@@ -4,6 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
+@media screen and (max-width: 600px) {
+  .center {
+    flex-direction: column;
+  }
+}
 
 .title{
   font-family: 'SentinelFont';
@@ -36,11 +41,17 @@
 #container a {
   text-decoration: none;
 }
-ion-content {
+.bg-img {
   --background: none;
   background-image: url('../../assets/images/screen-shoot0.png');
   background-repeat: no-repeat;
   background-size: cover; 
+}
+@media screen and (max-width: 600px) {
+  .bg-img {
+    background-position: right;
+    background-image: url('../../assets/images/screen-shoot0_0.png');
+  }
 }
 @keyframes palpitating {
   0% { transform: scale(1); }
@@ -61,6 +72,7 @@ button{
   padding: 15px;
   border: solid black 3px;
   font-family: 'SentinelFont';
+  margin-top: 100px;
 }
 
 .blurred-div{
@@ -76,13 +88,21 @@ button{
   -moz-box-shadow: -2px -1px 200px 0px rgba(59, 59, 59, 0.75);
 }
 
+
 .gallery{
   margin-top: 100px;
 }
 
 .image-container{
   padding: 5%;
-  margin: 5%;
+  margin: 20%;
+  background-image: url("../../assets/images/Menu_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // border:rgba(0, 0, 0, 0.5) 10px solid
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .gallery-container{
   display: grid;
@@ -106,4 +126,54 @@ button{
   // padding: 5px;
   background-color: white;
   border-radius: 50%; /* sets the border radius to 25px */
+}
+
+.image-square{
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  max-height: 100%;
+  margin: 20px;
+  object-fit: cover;
+}
+.new-background-color{
+  --background: none;
+  background-image: url('../../assets/images/Menu_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: background-scroll 30s linear infinite;
+}
+
+@keyframes background-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.credits-card{
+  margin:20px;
+  padding: 10px;
+  --background: none;
+  background-image: url('../../assets/images/Menu_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: background-scroll 30s linear infinite;
+}
+.credits-card-header{
+  background-color: #79444a;
+  // padding:6px;
+  margin:20px;
+  border: solid 4px black;
+}
+
+@keyframes background-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<pdf-viewer [src]="'../../assets/pdfs/'+filename+'.pdf'"
+              [render-text]="true"
+              [original-size]="false"
+              style="width: 100vw; height: 100vh"></pdf-viewer>

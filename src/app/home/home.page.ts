@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ModalComponent } from '../modal/modal.component';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,8 +10,35 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  
+  constructor
+  (
+    public modalController:ModalController,
+    public fileOpener:FileOpener,
+    public location:Location,
+  ) {
+    // this.fileOpener.open('../../assets/pdfs/1.pdf', 'application/pdf')
+    //   .then(() => console.log('File is opened'))
+    //   .catch(e => console.log('Error openening file', e));
+  }
   isHovering = false;
+
+  showButtons = false;
+  @ViewChild('mySelect') mySelect: any;
+
+  clearSelection() {
+    this.mySelect.value = null;
+  }
+
+  goToPdf(x:any){
+    const currentPath = this.location.path();
+    const pdfUrl = `${currentPath}/pdf/${x}`;
+    window.location.href = pdfUrl;
+  }
+
+  toggleButtons() {
+    this.showButtons = !this.showButtons;
+  }
 
   handleMouseMove(event: any): void {
     const circle = document.querySelector('.circle') as HTMLElement;
@@ -23,5 +53,16 @@ export class HomePage {
 
   handleMouseLeave(): void {
     this.isHovering = false;
+  }
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: ModalComponent,
+      componentProps: {
+        modalTitle: 'My Modal',
+        modalData: { name: 'John Doe' }
+      }
+    });
+  
+    modal.present();
   }
 }
