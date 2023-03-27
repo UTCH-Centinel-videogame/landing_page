@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { PdfViewrComponent } from "../pdf-viewr/pdf-viewr.component"
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 @NgModule({
   imports: [
     CommonModule,
