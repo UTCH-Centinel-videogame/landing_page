@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class HomePage {
 
-  
+
   constructor
   (
     public modalController:ModalController,
@@ -22,7 +22,6 @@ export class HomePage {
     //   .catch(e => console.log('Error openening file', e));
   }
   isHovering = false;
-
   showButtons = false;
   @ViewChild('mySelect') mySelect: any;
 
@@ -62,7 +61,7 @@ export class HomePage {
         modalData: { name: 'John Doe' }
       }
     });
-  
+
     modal.present();
   }
 }

@@ -14,6 +14,9 @@
   font-family: 'SentinelFont';
 }
 
+p{
+  font-family: 'SentinelFont';
+}
 #container {
   text-align: center;
 
@@ -42,10 +45,11 @@
   text-decoration: none;
 }
 .bg-img {
+  z-index: 0;
   --background: none;
   background-image: url('../../assets/images/screen-shoot0.png');
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 @media screen and (max-width: 600px) {
   .bg-img {
@@ -113,10 +117,11 @@ button{
 .image{
   width: 450px;
   height: 250px;
-  border: 10px solid #ccc; /* creates a solid frame with a thickness of 20 pixels and a light gray color */
+  // border: 10px solid #ccc; /* creates a solid frame with a thickness of 20 pixels and a light gray color */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* adds a drop shadow effect to create depth */
   padding: 10px; /* adds padding inside the frame to separate the content from the border */
   background-color: white; /* sets the background color of the frame to white */
+  margin-bottom: 25px;
 }
 .image-rounded{
   width: 200px;
@@ -130,7 +135,7 @@ button{
 
 .image-square{
   width: 100%;
-  max-width: 450px;
+  max-width: 325px;
   height: 300px;
   max-height: 100%;
   margin: 20px;

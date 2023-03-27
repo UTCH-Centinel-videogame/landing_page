@@ -17,20 +17,22 @@ export class ModalComponent  implements OnInit {
   surveyForm: any;
   constructor(private modalController: ModalController) {
     this.surveyForm = new FormGroup({
-      answer1: new FormControl('', Validators.required),
-      answer2: new FormControl('', Validators.required),
-      answer3: new FormControl('', Validators.required),
+      gameplayRating: new FormControl('', Validators.required),
+      musicRating: new FormControl('', Validators.required),
+      artRating: new FormControl('', Validators.required),
+      storyRating: new FormControl('', Validators.required),
+      difficultyRating: new FormControl('', Validators.required),
     })
-      
+
   }
 
   ngOnInit() {
 
     // Set modal title
     if (!this.modalTitle) {
-      this.modalTitle = 'Modal Title';
+      this.modalTitle = 'Survey';
     }
-  
+
     // Set modal data
     if (!this.modalData) {
       this.modalData = {};

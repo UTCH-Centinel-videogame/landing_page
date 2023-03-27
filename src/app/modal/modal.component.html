@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-item>
+      <p>Survey</p>
+    </ion-item>
     <ion-buttons slot="end">
       <ion-button (click)="closeModal()">
         <ion-icon name="close"/>
@@ -10,8 +13,134 @@
 
 <ion-content class="ion-padding">
   <form [formGroup]="surveyForm" (ngSubmit)="submitSurvey()">
-
-    <ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-label style="display:flex; align-items:center;">Gameplay</ion-label>
+        <ion-radio-group formControlName="gameplayRating" style="display:flex; align-items:center;">
+          <ion-item style="margin: 0;">
+            <ion-label>1</ion-label>
+            <ion-radio value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>2</ion-label>
+            <ion-radio value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>3</ion-label>
+            <ion-radio value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>4</ion-label>
+            <ion-radio value="4"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>5</ion-label>
+            <ion-radio value="5"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-label style="display:flex; align-items:center;">Music</ion-label>
+        <ion-radio-group formControlName="musicRating" style="display:flex; align-items:center;">
+          <ion-item style="margin: 0;">
+            <ion-label>1</ion-label>
+            <ion-radio value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>2</ion-label>
+            <ion-radio value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>3</ion-label>
+            <ion-radio value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>4</ion-label>
+            <ion-radio value="4"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>5</ion-label>
+            <ion-radio value="5"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-label style="display:flex; align-items:center;">Art</ion-label>
+        <ion-radio-group formControlName="artRating" style="display:flex; align-items:center;">
+          <ion-item style="margin: 0;">
+            <ion-label>1</ion-label>
+            <ion-radio value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>2</ion-label>
+            <ion-radio value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>3</ion-label>
+            <ion-radio value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>4</ion-label>
+            <ion-radio value="4"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>5</ion-label>
+            <ion-radio value="5"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-label style="display:flex; align-items:center;">Story</ion-label>
+        <ion-radio-group formControlName="storyRating" style="display:flex; align-items:center;">
+          <ion-item style="margin: 0;">
+            <ion-label>1</ion-label>
+            <ion-radio value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>2</ion-label>
+            <ion-radio value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>3</ion-label>
+            <ion-radio value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>4</ion-label>
+            <ion-radio value="4"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>5</ion-label>
+            <ion-radio value="5"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-label style="display:flex; align-items:center;">Difficulty</ion-label>
+        <ion-radio-group formControlName="difficultyRating" style="display:flex; align-items:center;">
+          <ion-item style="margin: 0;">
+            <ion-label>1</ion-label>
+            <ion-radio value="1"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>2</ion-label>
+            <ion-radio value="2"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>3</ion-label>
+            <ion-radio value="3"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>4</ion-label>
+            <ion-radio value="4"></ion-radio>
+          </ion-item>
+          <ion-item style="margin: 0;">
+            <ion-label>5</ion-label>
+            <ion-radio value="5"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+    </ion-list>
+    <!-- <ion-item>
       <ion-label>Gameplay:</ion-label>
       <ion-select formControlName="answer1">
         <ion-select-option value="option1">0</ion-select-option>
@@ -37,7 +166,7 @@
         <ion-select-option value="option3">100</ion-select-option>
       </ion-select>
     </ion-item>
-    
+
     <ion-item>
       <ion-label>Story:</ion-label>
       <ion-select formControlName="answer3">
@@ -61,7 +190,7 @@
         <ion-select-option value="option2">50</ion-select-option>
         <ion-select-option value="option3">100</ion-select-option>
       </ion-select>
-    </ion-item>
+    </ion-item> -->
 
     <ion-button type="submit" expand="block" [disabled]="!surveyForm.valid">Submit</ion-button>
 
