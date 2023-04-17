@@ -64,4 +64,8 @@ export class HomePage {
 
     modal.present();
   }
+
+  openWebpage(){
+    window.open("https://fertrick.itch.io/sentinel");
+  }
 }
